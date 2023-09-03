@@ -33,13 +33,7 @@ if option.lower() == "single" :
     data = df.copy()
 
     pred = model.predict(data)
-
-    '''
-    if pred == 0 :
-        prediction = "Attack"
-    else : 
-        prediction = "Normal"
-    '''
+    
     df["prediction"] = pred
     
     tab_1.title(f"From the features provided, The crop to plant is {pred}")
